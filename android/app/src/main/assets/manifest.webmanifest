@@ -1,0 +1,12 @@
+{
+  "name": "نُور — رفيقك الإيماني",
+  "short_name": "نُور",
+  "lang": "ar",
+  "dir": "rtl",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#061f19",
+  "theme_color": "#073b2d",
+  "description": "القرآن الكريم والأذكار والتقويم الإسلامي",
+  "icons": []
+}
