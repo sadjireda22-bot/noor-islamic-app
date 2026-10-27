@@ -60,8 +60,119 @@ html[data-theme="dark"]{color-scheme:dark;--bg:#121311;--surface:#1c1d19;--surfa
   </div>
 </section>
 
+
 <section class="view" id="view-memorize">
-  <h2 class="page-title">رفيق الحفظ ✦</h2><p class="page-subtitle">ضع هدفًا صغيرًا، اختبر ذاكرتك، واكتب السور التي تراجعها. لا بأس أن تخطئ؛ كل محاولة تدريب.</p>
-  <div class="memorize-layout">
-    <div class="challenge">
-      <div class="challenge-top"><span class="pill">?
+  <h2 class="page-title">رفيق الحفظ ✦</h2>
+  <p class="page-subtitle">تدرّب بهدوء، وراجع ما حفظته خطوة بخطوة.</p>
+  <div class="card">
+    <div class="feature-icon">📖</div>
+    <h3>خطتك اليوم</h3>
+    <p>افتح القرآن، اقرأ الآيات بصوت قارئك المفضل، ثم اختبر ذاكرتك بنفسك.</p>
+    <button class="btn primary" data-go="quran">ابدأ مراجعة القرآن</button>
+  </div>
+  <div class="card">
+    <h3>إنجازك اليوم</h3>
+    <div class="stats">
+      <div><strong id="stat-reviewed">0</strong><span>محاولات اليوم</span></div>
+      <div><strong id="stat-learned">0</strong><span>آيات أتقنتها</span></div>
+    </div>
+    <p class="api-note">ابدأ بهدف صغير، وكرّر المراجعة بانتظام.</p>
+  </div>
+</section>
+
+<section class="view" id="view-adhkar">
+  <h2 class="page-title">الأذكار والتسبيح 🤲</h2>
+  <p class="page-subtitle">اجعل لسانك رطبًا بذكر الله.</p>
+  <div class="card dhikr">
+    <h3>سبحان الله</h3><p>اضغط على العداد مع كل تسبيحة.</p>
+    <button class="counter" id="counter-subhan" data-target="33" data-current="0">0 / 33</button>
+    <button class="btn soft" data-reset-counter="counter-subhan">إعادة العداد</button>
+  </div>
+  <div class="card dhikr">
+    <h3>الحمد لله</h3>
+    <button class="counter" id="counter-hamd" data-target="33" data-current="0">0 / 33</button>
+    <button class="btn soft" data-reset-counter="counter-hamd">إعادة العداد</button>
+  </div>
+  <div class="card dhikr">
+    <h3>الله أكبر</h3>
+    <button class="counter" id="counter-akbar" data-target="34" data-current="0">0 / 34</button>
+    <button class="btn soft" data-reset-counter="counter-akbar">إعادة العداد</button>
+  </div>
+  <div class="card">
+    <h3>ذكر الصباح والمساء</h3>
+    <p>أصبحنا وأصبح الملك لله، والحمد لله، لا إله إلا الله وحده لا شريك له، له الملك وله الحمد وهو على كل شيء قدير.</p>
+    <p class="api-note">راجع الأذكار من مصدر موثوق للمحافظة على ألفاظها الصحيحة.</p>
+  </div>
+</section>
+
+<section class="view" id="view-hadith">
+  <h2 class="page-title">أحاديث نبوية ✨</h2>
+  <p class="page-subtitle">تذكيرات قصيرة للتدبر والعمل.</p>
+  <div class="card">
+    <span class="pill">صحيح البخاري</span>
+    <blockquote>«إنما الأعمال بالنيات»</blockquote>
+    <p class="api-note">حديث عمر بن الخطاب رضي الله عنه، في بدء صحيح البخاري.</p>
+  </div>
+  <div class="card">
+    <span class="pill">صحيح البخاري وصحيح مسلم</span>
+    <blockquote>«من كان يؤمن بالله واليوم الآخر فليقل خيرًا أو ليصمت»</blockquote>
+    <p class="api-note">تذكّر أثر الكلمة الطيبة والصمت عن الشر.</p>
+  </div>
+</section>
+
+<section class="view" id="view-prayer">
+  <h2 class="page-title">مواقيت الصلاة 🕌</h2>
+  <p class="page-subtitle">المواقيت المعروضة تقديرية لوهران، الجزائر.</p>
+  <div class="card">
+    <p id="prayer-date">مواقيت اليوم</p>
+    <div class="prayer-grid" id="prayer-grid">
+      <div class="prayer-item"><strong>الفجر</strong><span>--:--</span></div>
+      <div class="prayer-item"><strong>الشروق</strong><span>--:--</span></div>
+      <div class="prayer-item"><strong>الظهر</strong><span>--:--</span></div>
+      <div class="prayer-item"><strong>العصر</strong><span>--:--</span></div>
+      <div class="prayer-item"><strong>المغرب</strong><span>--:--</span></div>
+      <div class="prayer-item"><strong>العشاء</strong><span>--:--</span></div>
+    </div>
+    <p class="api-note">تحتاج المواقيت إلى الإنترنت، وقد تختلف عن التوقيت المحلي المعتمد.</p>
+  </div>
+</section>
+
+<section class="view" id="view-calendar">
+  <h2 class="page-title">التقويم الإسلامي 🌙</h2>
+  <p class="page-subtitle">محطات ومناسبات في السنة الهجرية.</p>
+  <div class="card"><h3>رمضان</h3><p>شهر الصيام والقرآن والقيام.</p></div>
+  <div class="card"><h3>عيد الفطر</h3><p>يُحدّد موعده وفق إعلان الجهات المختصة ورؤية الهلال.</p></div>
+  <div class="card"><h3>يوم عرفة وعيد الأضحى</h3><p>تُعتمد التواريخ الرسمية على إعلان الجهات المختصة.</p></div>
+</section>
+
+<section class="view" id="view-settings">
+  <h2 class="page-title">تخصيص NOOR ⚙️</h2>
+  <p class="page-subtitle">اختر المظهر الذي يناسبك.</p>
+  <div class="card">
+    <h3>المظهر</h3>
+    <div class="theme-options">
+      <button class="theme-option" data-theme-choice="green">🌿 الأخضر والذهبي</button>
+      <button class="theme-option" data-theme-choice="brown">🤎 البني والكريمي</button>
+      <button class="theme-option" data-theme-choice="dark">🌑 الأسود والذهبي</button>
+    </div>
+    <p class="api-note">يُحفظ اختيار المظهر على هذا الجهاز.</p>
+  </div>
+  <div class="card">
+    <h3>حول نُور</h3>
+    <p>رفيق إسلامي للقرآن والأذكار ومواقيت الصلاة. تُحمّل بيانات القرآن والمواقيت عبر الإنترنت.</p>
+  </div>
+</section>
+
+</main>
+
+<nav class="bottom-nav" aria-label="التنقل الرئيسي">
+  <button class="active" data-view="home"><span>⌂</span>الرئيسية</button>
+  <button data-view="quran"><span>۞</span>القرآن</button>
+  <button data-view="adhkar"><span>✿</span>الأذكار</button>
+  <button data-view="memorize"><span>✦</span>الحفظ</button>
+  <button data-view="settings"><span>⚙</span>الإعدادات</button>
+</nav>
+<div id="toast" class="toast" role="status" hidden></div>
+<script src="app.js"></script>
+</body>
+</html>
